@@ -50,6 +50,31 @@ git switch main
 git rebase new-branch
 ```
 
+### Work In Progress (WIP) commits
+
+Sometimes, we want to save the work remotely so we can continue from home, for example. However, we have not finished the work to issue a commit. In this case, we can do a small trick and push the changes in the working branch like this:
+
+```bash
+# Create branch
+git branch new-branch
+git switch new-branch
+# Add changes to wip commit
+git add .
+git commit -m "wip"
+git push -u origin new-branch
+# Add more changes
+git commit --ammend --no-edit
+git push -f
+# Add last changes, definitive ones
+git reset HEAD~
+git add .
+git commit -m "feat: add a new feature for foo in bar"
+git push -f
+# Merge without a merge commit
+git switch main
+git rebase new-branch
+```
+
 ## Credits
 
 This git policy has been created by [Martiño Rivera-Dourado](https://martinord.eu) and published at [Github](https://github.com/martinord/git-policy).
