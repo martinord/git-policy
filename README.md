@@ -78,3 +78,9 @@ git rebase new-branch
 ## Credits
 
 This git policy has been created by [Martiño Rivera-Dourado](https://martinord.eu) and published at [Github](https://github.com/martinord/git-policy).
+
+### Bibliography
+
+- https://www.freecodecamp.org/news/how-to-use-branches-in-git/
+- https://www.freecodecamp.org/news/how-to-write-better-git-commit-messages/
+- https://bitsnbytes.blog/2018/11/26/using-a-work-in-progress-commit/
